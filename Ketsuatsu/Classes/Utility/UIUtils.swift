@@ -9,10 +9,22 @@
 import UIKit
 
 class UIUtils: NSObject {
+    
+    // Format Date
     class func getStringFromDate(_ date: Foundation.Date, formatDate: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone.autoupdatingCurrent
         dateFormatter.dateFormat = formatDate
         return dateFormatter.string(from: date)
+    }
+    
+    // Handle String
+    class func removeFirstCharacterIsZero(_ numberString: String) -> String {
+        var newString = numberString
+        while newString.first == "0" {
+            let index = newString.index(newString.startIndex, offsetBy: 1)
+            newString = String(newString[index...])
+        }
+        return newString
     }
 }

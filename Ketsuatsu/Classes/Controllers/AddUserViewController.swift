@@ -14,6 +14,10 @@ class AddUserViewController: BaseViewController {
     @IBOutlet weak var lbBirthday: UILabel!
     @IBOutlet weak var lbGender: UILabel!
     
+    @IBOutlet weak var txtFieldName: UITextField!
+    @IBOutlet weak var txtFieldWeight: UITextField!
+    @IBOutlet weak var txtFieldHeight: UITextField!
+    
     var actionSheet: ActionSheetDatePicker?
     
     override func viewDidLoad() {
@@ -21,10 +25,11 @@ class AddUserViewController: BaseViewController {
         actionSheet?.maximumDate = Date()
         self.lbGender.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleChooseGender)))
         lbGender.isUserInteractionEnabled = true
+        setupUITextField()
     }
     
     @IBAction func invokedButtonCalendar(_ sender: Any) {
-        ActionSheetDatePicker.show(withTitle: "", datePickerMode: .date, selectedDate:(NSDate() as Date!) , minimumDate: nil, maximumDate: NSDate() as Date!, doneBlock: { (picker, value, index) in
+        ActionSheetDatePicker.show(withTitle: "", datePickerMode: .date, selectedDate:(NSDate() as Date?) , minimumDate: nil, maximumDate: NSDate() as Date?, doneBlock: { (picker, value, index) in
             let date = value as? Date
             let dateString = UIUtils.getStringFromDate(date!, formatDate: "yyyy/MM/dd")
             self.lbBirthday.text = dateString
@@ -38,5 +43,13 @@ extension AddUserViewController {
             let stringGender = value as? String
             self.lbGender.text = stringGender
         }, cancel: { ActionStringCancelBlock in return }, origin: view.superview!.superview)
+    }
+    
+    func setupUITextField() -> Void {
+        txtFieldName.limitCount(limit: 30)
+        txtFieldWeight.limitCount(limit: 3)
+        txtFieldWeight.setTextDefault(text: "0")
+        txtFieldHeight.limitCount(limit: 3)
+        txtFieldHeight.setTextDefault(text: "0")
     }
 }
