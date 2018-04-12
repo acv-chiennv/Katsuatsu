@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "ユーザーを追加"; ObjectID = "0ce-gw-yy1"; */
+"0ce-gw-yy1.normalTitle" = "ユーザーを追加";
+
+/* Class = "UILabel"; text = "体重"; ObjectID = "1vr-bW-lsb"; */
+"1vr-bW-lsb.text" = "体重";
+
+/* Class = "UILabel"; text = "ユーザー選択"; ObjectID = "1zU-6s-n3z"; */
+"1zU-6s-n3z.text" = "ユーザー選択";
+
+/* Class = "UILabel"; text = "ユーザー追加"; ObjectID = "6KK-PK-kzc"; */
+"6KK-PK-kzc.text" = "ユーザー追加";
+
+/* Class = "UILabel"; text = "身長"; ObjectID = "8vQ-o5-PGx"; */
+"8vQ-o5-PGx.text" = "身長";
+
+/* Class = "UILabel"; text = "名前"; ObjectID = "90z-Me-XTk"; */
+"90z-Me-XTk.text" = "名前";
+
+/* Class = "UIButton"; normalTitle = "追加"; ObjectID = "DOT-b7-xa9"; */
+"DOT-b7-xa9.normalTitle" = "追加";
+
+/* Class = "UILabel"; text = "生年月日"; ObjectID = "goR-Q5-bPp"; */
+"goR-Q5-bPp.text" = "生年月日";
+
+/* Class = "UILabel"; text = "性別"; ObjectID = "jud-6S-xtZ"; */
+"jud-6S-xtZ.text" = "性別";

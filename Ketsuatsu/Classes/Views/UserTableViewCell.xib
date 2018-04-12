@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Yu Gothic Bold.otf">
+            <string>YuGo-Bold</string>
+        </array>
+        <array key="Yu Gothic Medium.otf">
+            <string>YuGo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="85" id="KGk-i7-Jjw" customClass="UserTableViewCell" customModule="Ketsuatsu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="84.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZP4-77-lCq">
+                        <rect key="frame" x="13" y="7" width="294" height="70.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_user" translatesAutoresizingMaskIntoConstraints="NO" id="TBi-Gv-pZf">
+                                <rect key="frame" x="15" y="16" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lx1-oy-0TW"/>
+                                    <constraint firstAttribute="width" constant="40" id="qgH-N7-woW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5n-ne-1sE">
+                                <rect key="frame" x="72" y="12" width="134" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="2vh-SN-JKs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="YuGo-Bold" family="YuGothic" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6V-25-ecU">
+                                <rect key="frame" x="216" y="18.5" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="KHS-sX-F2o"/>
+                                    <constraint firstAttribute="height" constant="35" id="LUc-RM-hJT"/>
+                                </constraints>
+                                <state key="normal" image="ico_edit"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXU-HS-XYC">
+                                <rect key="frame" x="251" y="18" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="GY6-tV-oDZ"/>
+                                    <constraint firstAttribute="width" constant="35" id="RW7-vg-R4v"/>
+                                </constraints>
+                                <state key="normal" image="ico_delete"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20歳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4r-M8-WaT">
+                                <rect key="frame" x="72" y="36.5" width="134" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="DYV-1p-JuF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="YuGo-Medium" family="YuGothic" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O5n-ne-1sE" firstAttribute="leading" secondItem="TBi-Gv-pZf" secondAttribute="trailing" constant="17" id="4wB-fA-TjQ"/>
+                            <constraint firstItem="FXU-HS-XYC" firstAttribute="centerY" secondItem="ZP4-77-lCq" secondAttribute="centerY" id="QGv-q9-23S"/>
+                            <constraint firstItem="K6V-25-ecU" firstAttribute="centerY" secondItem="ZP4-77-lCq" secondAttribute="centerY" id="R9W-qf-6LT"/>
+                            <constraint firstItem="FXU-HS-XYC" firstAttribute="leading" secondItem="K6V-25-ecU" secondAttribute="trailing" id="Tby-dt-2gn"/>
+                            <constraint firstItem="O5n-ne-1sE" firstAttribute="top" secondItem="ZP4-77-lCq" secondAttribute="top" constant="12" id="Wfy-OC-V9N"/>
+                            <constraint firstAttribute="bottom" secondItem="L4r-M8-WaT" secondAttribute="bottom" constant="12" id="XLd-tQ-avr"/>
+                            <constraint firstItem="L4r-M8-WaT" firstAttribute="leading" secondItem="TBi-Gv-pZf" secondAttribute="trailing" constant="17" id="fAm-oe-WVR"/>
+                            <constraint firstAttribute="trailing" secondItem="FXU-HS-XYC" secondAttribute="trailing" constant="8" id="fml-06-X3D"/>
+                            <constraint firstItem="K6V-25-ecU" firstAttribute="leading" secondItem="O5n-ne-1sE" secondAttribute="trailing" constant="10" id="l8j-b9-uk5"/>
+                            <constraint firstItem="K6V-25-ecU" firstAttribute="leading" secondItem="L4r-M8-WaT" secondAttribute="trailing" constant="10" id="pga-Uu-ueV"/>
+                            <constraint firstItem="TBi-Gv-pZf" firstAttribute="centerY" secondItem="ZP4-77-lCq" secondAttribute="centerY" id="szx-Nf-br8"/>
+                            <constraint firstItem="TBi-Gv-pZf" firstAttribute="leading" secondItem="ZP4-77-lCq" secondAttribute="leading" constant="15" id="zFs-fK-4zM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ZP4-77-lCq" secondAttribute="trailing" constant="13" id="KrX-hq-AtR"/>
+                    <constraint firstItem="ZP4-77-lCq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="jJz-TG-WmM"/>
+                    <constraint firstAttribute="bottom" secondItem="ZP4-77-lCq" secondAttribute="bottom" constant="7" id="jNa-CE-lbl"/>
+                    <constraint firstItem="ZP4-77-lCq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="pXa-HV-9dU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="25" y="51.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_delete" width="20" height="23"/>
+        <image name="ico_edit" width="21" height="21"/>
+        <image name="ico_user" width="42" height="42"/>
+    </resources>
+</document>
