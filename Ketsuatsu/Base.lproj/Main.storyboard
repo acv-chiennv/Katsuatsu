@@ -126,16 +126,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tL7-Ke-du4" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザー追加" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KK-PK-kzc">
-                                        <rect key="frame" x="133.66666666666666" y="44" width="108.33333333333334" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー追加" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KK-PK-kzc">
+                                        <rect key="frame" x="133" y="44" width="110" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="7Aw-dn-5cK"/>
+                                            <constraint firstAttribute="width" constant="110" id="Btu-1z-UCB"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="YuGo-Bold" family="YuGothic" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ql-4i-7mq">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ql-4i-7mq">
                                         <rect key="frame" x="0.0" y="35" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="FFe-tp-mK8"/>
+                                            <constraint firstAttribute="height" constant="40" id="vM5-M4-qI1"/>
+                                        </constraints>
                                         <state key="normal" image="ico_back"/>
                                         <connections>
                                             <segue destination="Tn1-5m-khm" kind="custom" customClass="PopSegue" customModule="Ketsuatsu" customModuleProvider="target" id="FXG-Hd-Zdr"/>
@@ -144,7 +150,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.88627450980392153" green="0.32549019607843138" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5ql-4i-7mq" secondAttribute="bottom" constant="5" id="1gB-RO-Pd5"/>
+                                    <constraint firstItem="5ql-4i-7mq" firstAttribute="leading" secondItem="tL7-Ke-du4" secondAttribute="leading" id="K7A-8J-5cy"/>
+                                    <constraint firstItem="6KK-PK-kzc" firstAttribute="centerX" secondItem="tL7-Ke-du4" secondAttribute="centerX" id="lk0-PE-FJH"/>
                                     <constraint firstAttribute="height" constant="80" id="mww-ZI-ee5"/>
+                                    <constraint firstAttribute="bottom" secondItem="6KK-PK-kzc" secondAttribute="bottom" constant="12" id="nDm-JZ-yLe"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d5-8S-dye">
