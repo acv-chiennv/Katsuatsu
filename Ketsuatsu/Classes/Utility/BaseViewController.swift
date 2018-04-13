@@ -14,12 +14,17 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initUI()
         self.addTapGesture()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         keyboardManager.onDestroy()
+    }
+    
+    func initUI() {
+        
     }
 }
 

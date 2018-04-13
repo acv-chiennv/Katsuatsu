@@ -15,6 +15,7 @@ class ListUserViewController: BaseViewController {
     let USER_CELL_NIBNAME                 = "UserTableViewCell"
     let USER_CELL_IDENTIFIER              = "UserTableViewCell"
     
+    
     let HEIGHT_ROW_DEFAULT = 85
     
     override func viewDidLoad() {
@@ -51,6 +52,7 @@ extension ListUserViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
+        let startVC = UIUtils.viewControllerWithIndentifier(identifier: START_VIEWCONTROLLER_IDENTIFIER, storyboardName: "Main") as! StartViewController
+        self.navigationController?.pushViewController(startVC, animated: true)
     }
 }

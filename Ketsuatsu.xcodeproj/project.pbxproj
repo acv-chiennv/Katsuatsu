@@ -13,6 +13,18 @@
 		81510C2F207B4768005ECD67 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81510C2D207B4768005ECD67 /* UserTableViewCell.xib */; };
 		81510C31207B5626005ECD67 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C30207B5626005ECD67 /* AddUserViewController.swift */; };
 		81510C37207F6AF3005ECD67 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C36207F6AF3005ECD67 /* KeyboardManager.swift */; };
+		81510C3A20805C0B005ECD67 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C3920805C0B005ECD67 /* User.swift */; };
+		81510C3C208067A4005ECD67 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C3B208067A4005ECD67 /* StartViewController.swift */; };
+		81510C4820809F66005ECD67 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81510C3E20809F66005ECD67 /* CameraViewController.xib */; };
+		81510C4920809F66005ECD67 /* FSImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C3F20809F66005ECD67 /* FSImageCropView.swift */; };
+		81510C4A20809F66005ECD67 /* PhotoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C4020809F66005ECD67 /* PhotoPreviewViewController.swift */; };
+		81510C4B20809F66005ECD67 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C4120809F66005ECD67 /* CameraViewController.swift */; };
+		81510C4C20809F66005ECD67 /* PhotoPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81510C4220809F66005ECD67 /* PhotoPreviewViewController.xib */; };
+		81510C4D20809F66005ECD67 /* FSAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C4320809F66005ECD67 /* FSAlbumViewCell.swift */; };
+		81510C4E20809F66005ECD67 /* FSAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81510C4420809F66005ECD67 /* FSAlbumView.xib */; };
+		81510C4F20809F66005ECD67 /* SelectImageLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C4520809F66005ECD67 /* SelectImageLibraryViewController.swift */; };
+		81510C5020809F66005ECD67 /* FSAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81510C4620809F66005ECD67 /* FSAlbumViewCell.xib */; };
+		81510C5120809F66005ECD67 /* FSAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C4720809F66005ECD67 /* FSAlbumView.swift */; };
 		819A6B6B207732CF002D7345 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819A6B69207732CF002D7345 /* Main.storyboard */; };
 		819A6B70207732CF002D7345 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819A6B6E207732CF002D7345 /* LaunchScreen.storyboard */; };
 		819A6B7B207732CF002D7345 /* KetsuatsuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A6B7A207732CF002D7345 /* KetsuatsuTests.swift */; };
@@ -49,6 +61,18 @@
 		81510C2D207B4768005ECD67 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		81510C30207B5626005ECD67 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		81510C36207F6AF3005ECD67 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		81510C3920805C0B005ECD67 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		81510C3B208067A4005ECD67 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		81510C3E20809F66005ECD67 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		81510C3F20809F66005ECD67 /* FSImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageCropView.swift; sourceTree = "<group>"; };
+		81510C4020809F66005ECD67 /* PhotoPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPreviewViewController.swift; sourceTree = "<group>"; };
+		81510C4120809F66005ECD67 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		81510C4220809F66005ECD67 /* PhotoPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoPreviewViewController.xib; sourceTree = "<group>"; };
+		81510C4320809F66005ECD67 /* FSAlbumViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumViewCell.swift; sourceTree = "<group>"; };
+		81510C4420809F66005ECD67 /* FSAlbumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSAlbumView.xib; sourceTree = "<group>"; };
+		81510C4520809F66005ECD67 /* SelectImageLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImageLibraryViewController.swift; sourceTree = "<group>"; };
+		81510C4620809F66005ECD67 /* FSAlbumViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSAlbumViewCell.xib; sourceTree = "<group>"; };
+		81510C4720809F66005ECD67 /* FSAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumView.swift; sourceTree = "<group>"; };
 		819A6B62207732CF002D7345 /* Ketsuatsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ketsuatsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		819A6B6A207732CF002D7345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		819A6B6F207732CF002D7345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,6 +144,31 @@
 			path = YuGothic;
 			sourceTree = "<group>";
 		};
+		81510C3820805B83005ECD67 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81510C3920805C0B005ECD67 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81510C3D20809F66005ECD67 /* CameraAndPhotoLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				81510C4120809F66005ECD67 /* CameraViewController.swift */,
+				81510C3E20809F66005ECD67 /* CameraViewController.xib */,
+				81510C4020809F66005ECD67 /* PhotoPreviewViewController.swift */,
+				81510C4220809F66005ECD67 /* PhotoPreviewViewController.xib */,
+				81510C4320809F66005ECD67 /* FSAlbumViewCell.swift */,
+				81510C4420809F66005ECD67 /* FSAlbumView.xib */,
+				81510C4720809F66005ECD67 /* FSAlbumView.swift */,
+				81510C4620809F66005ECD67 /* FSAlbumViewCell.xib */,
+				81510C3F20809F66005ECD67 /* FSImageCropView.swift */,
+				81510C4520809F66005ECD67 /* SelectImageLibraryViewController.swift */,
+			);
+			path = CameraAndPhotoLibrary;
+			sourceTree = "<group>";
+		};
 		819A6B59207732CF002D7345 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +216,7 @@
 				819A6B9E20775DD8002D7345 /* Controllers */,
 				819A6B9F20775DD8002D7345 /* Utility */,
 				819A6BA020775DD8002D7345 /* Views */,
+				81510C3820805B83005ECD67 /* Models */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -193,8 +243,10 @@
 		819A6B9E20775DD8002D7345 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				81510C3D20809F66005ECD67 /* CameraAndPhotoLibrary */,
 				819A6BAF2077653B002D7345 /* ListUserViewController.swift */,
 				81510C30207B5626005ECD67 /* AddUserViewController.swift */,
+				81510C3B208067A4005ECD67 /* StartViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -319,12 +371,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				81510C2B207B1F32005ECD67 /* Yu Gothic Bold.otf in Resources */,
+				81510C4820809F66005ECD67 /* CameraViewController.xib in Resources */,
 				819A6B70207732CF002D7345 /* LaunchScreen.storyboard in Resources */,
 				819A6B6B207732CF002D7345 /* Main.storyboard in Resources */,
 				81510C2F207B4768005ECD67 /* UserTableViewCell.xib in Resources */,
+				81510C4E20809F66005ECD67 /* FSAlbumView.xib in Resources */,
 				819A6B9B207757CC002D7345 /* Assets.xcassets in Resources */,
+				81510C4C20809F66005ECD67 /* PhotoPreviewViewController.xib in Resources */,
 				81510C2A207B1F32005ECD67 /* Yu Gothic Medium.otf in Resources */,
 				819A6B98207757C1002D7345 /* Info.plist in Resources */,
+				81510C5020809F66005ECD67 /* FSAlbumViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,18 +460,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81510C3A20805C0B005ECD67 /* User.swift in Sources */,
+				81510C4F20809F66005ECD67 /* SelectImageLibraryViewController.swift in Sources */,
+				81510C3C208067A4005ECD67 /* StartViewController.swift in Sources */,
 				81510C31207B5626005ECD67 /* AddUserViewController.swift in Sources */,
+				81510C4B20809F66005ECD67 /* CameraViewController.swift in Sources */,
+				81510C5120809F66005ECD67 /* FSAlbumView.swift in Sources */,
 				819A6B97207757C1002D7345 /* AppDelegate.swift in Sources */,
 				819A6BA420776020002D7345 /* UIExtension.swift in Sources */,
 				819A6BAC207760E1002D7345 /* Validate.swift in Sources */,
 				819A6BA220775F11002D7345 /* UIUtils.swift in Sources */,
 				81510C2E207B4768005ECD67 /* UserTableViewCell.swift in Sources */,
 				819A6BA62077603D002D7345 /* UIColorExtension.swift in Sources */,
+				81510C4920809F66005ECD67 /* FSImageCropView.swift in Sources */,
 				819A6BAE2077615A002D7345 /* BaseViewController.swift in Sources */,
 				81510C37207F6AF3005ECD67 /* KeyboardManager.swift in Sources */,
+				81510C4A20809F66005ECD67 /* PhotoPreviewViewController.swift in Sources */,
 				819A6BB02077653B002D7345 /* ListUserViewController.swift in Sources */,
 				819A6BA820776075002D7345 /* TransitionUtils.swift in Sources */,
 				819A6BAA207760CA002D7345 /* Constant.swift in Sources */,
+				81510C4D20809F66005ECD67 /* FSAlbumViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +575,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -560,6 +625,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

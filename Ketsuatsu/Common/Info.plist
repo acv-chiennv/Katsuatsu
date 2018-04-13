@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) カメラから選択</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) ライブラリから選択</string>
 	<key>CFBundleDisplayName</key>
 	<string>Ketsuatsu</string>
 	<key>CFBundleExecutable</key>

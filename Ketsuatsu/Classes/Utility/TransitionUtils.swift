@@ -8,6 +8,12 @@
 
 import UIKit
 
+class DismissSegue : UIStoryboardSegue {
+    override func perform() {
+        source.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+}
+
 class PopSegue : UIStoryboardSegue {
     override func perform() {
         source.navigationController?.popViewController(animated: true)
