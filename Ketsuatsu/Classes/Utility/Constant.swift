@@ -25,6 +25,8 @@ let KEY_WEIGHT              = "weight"
 
 let KEY_HEIGHT              = "height"
 
+let KEY_EMAIL               = "email"
+
 let GENDER_MALE             = "男性"
 let GENDER_FAMALE           = "女性"
 let IMAGE_USER_DEFAULT      = "avatarDefault"

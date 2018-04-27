@@ -87,4 +87,42 @@ class UIUtils: NSObject {
         dAttributeString.addAttribute(kCTParagraphStyleAttributeName as NSAttributedStringKey, value: dStyle, range: NSMakeRange(0, dText.count))
         label.attributedText = dAttributeString
     }
+    
+    // ToDo UserDefault
+    class func storeObjectToUserDefault(_ object: AnyObject, key: String) {
+        let dataSave = NSKeyedArchiver.archivedData(withRootObject: object)
+        UserDefaults.standard.set(dataSave, forKey: key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    class func getObjectFromUserDefault(_ key: String) -> AnyObject? {
+        if let object = UserDefaults.standard.object(forKey: key) {
+            return NSKeyedUnarchiver.unarchiveObject(with: object as! Data) as AnyObject?
+        }
+        
+        return nil
+    }
+    
+    class func removeObjectForKey(_ key: String) {
+        UserDefaults.standard.removeObject(forKey: key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    // Base 64
+    class func getBase64StringFromImageURL(_ strUrl: String) -> String? {
+        guard let url = URL(string: strUrl) else {
+            return nil
+        }
+        guard let imageData = NSData(contentsOf: url) else {
+            return nil
+        }
+        return imageData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+    }
+    
+    class func base64ToUIImage(_ stringBase64: String) -> UIImage? {
+        if let data = Data(base64Encoded: stringBase64) {
+            return UIImage(data: data)
+        }
+        return nil
+    }
 }

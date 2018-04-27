@@ -923,16 +923,36 @@
                                                     <action selector="invokedButtonDone:" destination="Tn1-5m-khm" eventType="touchUpInside" id="Nn2-YN-key"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmq-LY-l6A">
+                                                <rect key="frame" x="45" y="483" width="285" height="43"/>
+                                                <color key="backgroundColor" red="0.11372549019607843" green="0.18823529411764706" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="YuGo-Bold" family="YuGothic" pointSize="17"/>
+                                                <state key="normal" title="Facebook">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="invokedGetUserFromFacebook:" destination="Tn1-5m-khm" eventType="touchUpInside" id="tS7-dx-7IT"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="Wmq-LY-l6A" firstAttribute="top" secondItem="DOT-b7-xa9" secondAttribute="bottom" constant="25" id="0fq-iF-McH"/>
+                                            <constraint firstItem="Wmq-LY-l6A" firstAttribute="centerX" secondItem="DOT-b7-xa9" secondAttribute="centerX" id="75c-H5-beq"/>
                                             <constraint firstItem="XCB-CW-m9S" firstAttribute="top" secondItem="iEY-2k-StC" secondAttribute="top" constant="35" id="AL6-fv-eE7"/>
                                             <constraint firstItem="DOT-b7-xa9" firstAttribute="top" secondItem="Jaq-U7-NUj" secondAttribute="bottom" constant="55" id="HCf-bX-Dox"/>
+                                            <constraint firstItem="Wmq-LY-l6A" firstAttribute="width" secondItem="DOT-b7-xa9" secondAttribute="width" id="IxG-ch-QsW"/>
                                             <constraint firstItem="DOT-b7-xa9" firstAttribute="leading" secondItem="iEY-2k-StC" secondAttribute="leading" constant="45" id="Jb0-ok-d6w"/>
                                             <constraint firstItem="Jaq-U7-NUj" firstAttribute="leading" secondItem="iEY-2k-StC" secondAttribute="leading" id="M17-bg-Zqp"/>
                                             <constraint firstAttribute="trailing" secondItem="Jaq-U7-NUj" secondAttribute="trailing" id="MJ7-VL-CA2"/>
                                             <constraint firstAttribute="trailing" secondItem="DOT-b7-xa9" secondAttribute="trailing" constant="45" id="WFd-P0-nX5"/>
                                             <constraint firstItem="XCB-CW-m9S" firstAttribute="centerX" secondItem="iEY-2k-StC" secondAttribute="centerX" id="eIK-IQ-Yfd"/>
+                                            <constraint firstItem="Wmq-LY-l6A" firstAttribute="height" secondItem="DOT-b7-xa9" secondAttribute="height" id="k65-WD-niE"/>
                                             <constraint firstItem="Jaq-U7-NUj" firstAttribute="top" secondItem="XCB-CW-m9S" secondAttribute="bottom" id="qLL-te-XQB"/>
                                         </constraints>
                                     </view>

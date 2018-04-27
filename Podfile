@@ -12,4 +12,7 @@ target 'Ketsuatsu' do
 	pod 'ActionSheetPicker-3.0'
 	pod 'IQKeyboardManager'
 	pod 'RealmSwift'
+	pod 'FBSDKLoginKit'
+	pod 'FBSDKShareKit'
+	pod 'FBSDKCoreKit'
 end

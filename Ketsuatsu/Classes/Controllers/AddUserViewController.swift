@@ -8,6 +8,8 @@
 
 import UIKit
 import ActionSheetPicker_3_0
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class AddUserViewController: BaseViewController {
 
@@ -38,6 +40,34 @@ class AddUserViewController: BaseViewController {
         avatar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(chooseAvatar)))
         avatar.isUserInteractionEnabled = true
         setupUI()
+    }
+    
+    @IBAction func invokedGetUserFromFacebook(_ sender: Any) {
+        if (FBSDKAccessToken.current() != nil) {
+            let loginManager = FBSDKLoginManager()
+            loginManager.logOut()
+        }
+        
+        
+        if (FBSDKAccessToken.current() != nil) {
+            print(FBSDKAccessToken.current().userID)
+            getUserFacebookInfo()
+        } else {
+            let fbLogin = FBSDKLoginManager()
+            fbLogin.logIn(withReadPermissions: ["email", "public_profile"], from: self, handler: { (fbResult, fbError) in
+                print(fbResult.debugDescription)
+                if fbError != nil {
+                    print("Failed to login \(fbError!.localizedDescription)")
+                    return
+                }
+                guard let accessToken = FBSDKAccessToken.current() else {
+                    print("Failed to get access token")
+                    return
+                }
+                print(accessToken)
+                self.getUserFacebookInfo()
+            })
+        }
     }
     
     @IBAction func invokedButtonCalendar(_ sender: Any) {
@@ -133,6 +163,33 @@ extension AddUserViewController {
             lbTitleHeader.text = "ユーザー追加"
             txtFieldWeight.setTextDefault(text: "0")
             txtFieldHeight.setTextDefault(text: "0")
+        }
+    }
+    
+    func getUserFacebookInfo() {
+        let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"name ,email , picture.type(large)"])
+        graphRequest.start { (connection, result, error) in
+            if error != nil {
+                print("Get Info Error")
+            } else {
+                print(result.debugDescription)
+                guard let data = result as? [String: Any] else {
+                    return
+                }
+                
+                self.parseDataUserFacebook(data)
+            }
+        }
+    }
+    
+    func parseDataUserFacebook(_ dic: [String: Any]) {
+        txtFieldName.text = dic["name"] as? String
+        if let pictureDic = dic["picture"] as? [String: Any] {
+            if let data = pictureDic["data"] as? [String: Any] {
+                if let url = data["url"] as? String {
+                    avatar.image =  UIUtils.base64ToUIImage(UIUtils.getBase64StringFromImageURL(url)!)
+                }
+            }
         }
     }
 }
