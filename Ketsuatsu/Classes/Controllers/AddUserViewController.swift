@@ -43,11 +43,6 @@ class AddUserViewController: BaseViewController {
     }
     
     @IBAction func invokedGetUserFromFacebook(_ sender: Any) {
-        if (FBSDKAccessToken.current() != nil) {
-            let loginManager = FBSDKLoginManager()
-            loginManager.logOut()
-        }
-        
         
         if (FBSDKAccessToken.current() != nil) {
             print(FBSDKAccessToken.current().userID)
@@ -188,6 +183,7 @@ extension AddUserViewController {
             if let data = pictureDic["data"] as? [String: Any] {
                 if let url = data["url"] as? String {
                     avatar.image =  UIUtils.base64ToUIImage(UIUtils.getBase64StringFromImageURL(url)!)
+                    imageAvatar = UIUtils.base64ToUIImage(UIUtils.getBase64StringFromImageURL(url)!)?.data()
                 }
             }
         }
