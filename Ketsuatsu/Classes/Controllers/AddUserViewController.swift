@@ -26,11 +26,13 @@ class AddUserViewController: BaseViewController {
     var isEdit = false
     var dateSelected: Date?
     var genderSelected = 0
+    var imageAvatar: Data?
     var actionSheet: ActionSheetDatePicker?
+    var error: ERROR_INPUT?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        actionSheet?.maximumDate = Date()
+        dateSelected = Date().getYearFromNow(year: -1)
         lbGender.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleChooseGender)))
         lbGender.isUserInteractionEnabled = true
         avatar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(chooseAvatar)))
@@ -39,11 +41,40 @@ class AddUserViewController: BaseViewController {
     }
     
     @IBAction func invokedButtonCalendar(_ sender: Any) {
-        ActionSheetDatePicker.show(withTitle: "", datePickerMode: .date, selectedDate:dateSelected , minimumDate: nil, maximumDate: NSDate() as Date?, doneBlock: { (picker, value, index) in
+        ActionSheetDatePicker.show(withTitle: "", datePickerMode: .date, selectedDate:dateSelected , minimumDate: nil, maximumDate: Date().getYearFromNow(year: -1), doneBlock: { (picker, value, index) in
             let date = value as? Date
+            self.dateSelected = date
             let dateString = UIUtils.getStringFromDate(date!, formatDate: "yyyy/MM/dd")
             self.lbBirthday.text = dateString
         }, cancel: { ActionStringCancelBlock in return }, origin: view.superview!.superview)
+    }
+    
+    @IBAction func invokedButtonDone(_ sender: Any) {
+        
+        if !checkInvalidInputIsOK() {
+            return
+        }
+        let userNew = User()
+        userNew.avatar = imageAvatar
+        userNew.nickname = txtFieldName.text!
+        userNew.gender = genderSelected
+        userNew.age = UIUtils.caculatorAgeFromBirthDay(lbBirthday.text!)
+        userNew.birthday = UIUtils.getDateFromString((lbBirthday.text)!, formatDate: "yyyy/MM/dd")
+        userNew.height = Int(txtFieldHeight.text!)!
+        userNew.weight = Int(txtFieldWeight.text!)!
+
+        if isEdit {
+            // Update user already exists
+            userNew.id = user.id
+            DataStore.sharedInstance.editUser(userNew)
+            navigationController?.popToRootViewController(animated: true)
+        } else {
+            // Add new user => auto incrementID
+            userNew.id = DataStore.sharedInstance.incrementUserID()
+            // Add new user
+            DataStore.sharedInstance.addUser(userNew)
+            navigationController?.popViewController(animated: true)
+        }
     }
 }
 
@@ -53,6 +84,7 @@ extension AddUserViewController {
         let vc = CameraViewController(nibName: "CameraViewController", bundle: nil)
         vc.imageTaken = { image in
             self.avatar.image = image
+            self.imageAvatar = image.data()
         }
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -61,6 +93,11 @@ extension AddUserViewController {
         ActionSheetStringPicker.show(withTitle: "", rows: [GENDER_MALE, GENDER_FAMALE], initialSelection: genderSelected, doneBlock: { (picker, index, value) in
             let stringGender = value as? String
             self.lbGender.text = stringGender
+            if stringGender == GENDER_MALE {
+                self.genderSelected = 0
+            } else if stringGender == GENDER_FAMALE {
+                self.genderSelected = 1
+            }
         }, cancel: { ActionStringCancelBlock in return }, origin: view.superview!.superview)
     }
     
@@ -73,26 +110,81 @@ extension AddUserViewController {
         
         if isEdit {
             lbTitleHeader.text = "プロフィール編集"
+            if user.avatar != nil {
+                avatar.image = UIImage(data: (user.avatar)!)
+                imageAvatar = user.avatar
+            }
             txtFieldName.text = user.nickname
-            lbBirthday.text = user.birthday
-            lbGender.text = user.gender
-            txtFieldWeight.setTextDefault(text: user.weight!)
-            txtFieldHeight.setTextDefault(text: user.height!)
-            btnDone.setTitle("保存", for: .normal)
-            
-            dateSelected = UIUtils.getDateFromString(user.birthday!, formatDate: "yyyy/MM/dd")
-            if user.gender == GENDER_MALE {
+            lbBirthday.text = UIUtils.getStringFromDate(user.birthday, formatDate: "yyyy/MM/dd")
+            if user.gender == 0 {
+                lbGender.text = GENDER_MALE
                 genderSelected = 0
-            } else if user.gender == GENDER_FAMALE {
+            } else if user.gender == 1 {
+                lbGender.text = GENDER_FAMALE
                 genderSelected = 1
             }
+            txtFieldWeight.setTextDefault(text: String(user.weight))
+            txtFieldHeight.setTextDefault(text: String(user.height))
+            btnDone.setTitle("保存", for: .normal)
+            
+            dateSelected = user.birthday
         } else {
             btnDone.setTitle("追加", for: .normal)
             lbTitleHeader.text = "ユーザー追加"
             txtFieldWeight.setTextDefault(text: "0")
             txtFieldHeight.setTextDefault(text: "0")
-            
-            dateSelected = NSDate() as Date?
         }
+    }
+}
+
+extension AddUserViewController {
+    func checkInvalidInputIsOK() -> Bool {
+
+        if (txtFieldName.text?.isEmpty)! {
+            error = ERROR_INPUT(rawValue:ERROR_INPUT.INPUT_NAME.rawValue)
+            let message = error?.isShowErrorMessage(error!)
+            CustomAlertViewController.create()
+                .setHeightAlert(height: HEIGHT_ALERT_ERROR)
+                .setMessage(message: message)
+                .show()
+            return false
+        }
+        if (lbBirthday.text?.isEmpty)! {
+            error = ERROR_INPUT(rawValue:ERROR_INPUT.INPUT_BIRTHDAY.rawValue)
+            let message = error?.isShowErrorMessage(error!)
+            CustomAlertViewController.create()
+                .setHeightAlert(height: HEIGHT_ALERT_ERROR)
+                .setMessage(message: message)
+                .show()
+            return false
+        }
+        if (lbGender.text?.isEmpty)! {
+            error = ERROR_INPUT(rawValue:ERROR_INPUT.INPUT_GENDER.rawValue)
+            let message = error?.isShowErrorMessage(error!)
+            CustomAlertViewController.create()
+                .setHeightAlert(height: HEIGHT_ALERT_ERROR)
+                .setMessage(message: message)
+                .show()
+            return false
+        }
+        if txtFieldWeight.text == "" || txtFieldWeight.text == "0"{
+            error = ERROR_INPUT(rawValue:ERROR_INPUT.INPUT_WEIGHT.rawValue)
+            let message = error?.isShowErrorMessage(error!)
+            CustomAlertViewController.create()
+                .setHeightAlert(height: HEIGHT_ALERT_ERROR)
+                .setMessage(message: message)
+                .show()
+            return false
+        }
+        if txtFieldHeight.text == "" || txtFieldHeight.text == "0" {
+            error = ERROR_INPUT(rawValue:ERROR_INPUT.INPUT_HEIGHT.rawValue)
+            let message = error?.isShowErrorMessage(error!)
+            CustomAlertViewController.create()
+                .setHeightAlert(height: HEIGHT_ALERT_ERROR)
+                .setMessage(message: message)
+                .show()
+            return false
+        }
+        return true
     }
 }

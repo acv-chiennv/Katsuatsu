@@ -10,7 +10,7 @@ import UIKit
 
 class StartViewController: UIViewController {
 
-    var user = User()
+    var userExist = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,22 +18,21 @@ class StartViewController: UIViewController {
     }
 
     @IBAction func invokedStart(_ sender: Any) {
-        
+        let getPresureVC = UIUtils.viewControllerWithIndentifier(identifier: GET_PREASURE_VIEWCONTROLLER_IDENTIFIER, storyboardName: "Main") as! GetValuePresureViewController
+        getPresureVC.user = userExist
+        self.navigationController?.pushViewController(getPresureVC, animated: true)
     }
     
     @IBAction func invokedEditUser(_ sender: Any) {
         let editVC = UIUtils.viewControllerWithIndentifier(identifier: EDIT_VIEWCONTROLLER_IDENTIFIER, storyboardName: "Main") as! AddUserViewController
-        user.nickname = "chien"
-        user.birthday = "1992/02/11"
-        user.gender = GENDER_MALE
-        user.weight = "65"
-        user.height = "170"
-        editVC.user = user
+        editVC.user = userExist
         editVC.isEdit = true
         self.navigationController?.pushViewController(editVC, animated: true)
     }
     
     @IBAction func invokedGotoHistoryUser(_ sender: Any) {
-        
+        let historyVC = UIUtils.viewControllerWithIndentifier(identifier: HISTORY_VIEWCONTROLLER_IDENTIFIER, storyboardName: "Main") as! HistoryMeasureViewController
+        historyVC.user = userExist
+        self.navigationController?.pushViewController(historyVC, animated: true)
     }
 }

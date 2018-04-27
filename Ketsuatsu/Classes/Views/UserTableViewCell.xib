@@ -38,9 +38,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5n-ne-1sE">
-                                <rect key="frame" x="72" y="12" width="134" height="22"/>
+                                <rect key="frame" x="72" y="14" width="134" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="2vh-SN-JKs"/>
+                                    <constraint firstAttribute="height" constant="20" id="2vh-SN-JKs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="YuGo-Bold" family="YuGothic" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -53,6 +53,9 @@
                                     <constraint firstAttribute="height" constant="35" id="LUc-RM-hJT"/>
                                 </constraints>
                                 <state key="normal" image="ico_edit"/>
+                                <connections>
+                                    <action selector="invokedEdit:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BVT-gN-XCO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXU-HS-XYC">
                                 <rect key="frame" x="251" y="18" width="35" height="35"/>
@@ -61,11 +64,14 @@
                                     <constraint firstAttribute="width" constant="35" id="RW7-vg-R4v"/>
                                 </constraints>
                                 <state key="normal" image="ico_delete"/>
+                                <connections>
+                                    <action selector="invokedDelete:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5Wo-F7-tSB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20歳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4r-M8-WaT">
-                                <rect key="frame" x="72" y="36.5" width="134" height="22"/>
+                                <rect key="frame" x="72" y="36.5" width="134" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="DYV-1p-JuF"/>
+                                    <constraint firstAttribute="height" constant="20" id="DYV-1p-JuF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="YuGo-Medium" family="YuGothic" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -78,8 +84,8 @@
                             <constraint firstItem="FXU-HS-XYC" firstAttribute="centerY" secondItem="ZP4-77-lCq" secondAttribute="centerY" id="QGv-q9-23S"/>
                             <constraint firstItem="K6V-25-ecU" firstAttribute="centerY" secondItem="ZP4-77-lCq" secondAttribute="centerY" id="R9W-qf-6LT"/>
                             <constraint firstItem="FXU-HS-XYC" firstAttribute="leading" secondItem="K6V-25-ecU" secondAttribute="trailing" id="Tby-dt-2gn"/>
-                            <constraint firstItem="O5n-ne-1sE" firstAttribute="top" secondItem="ZP4-77-lCq" secondAttribute="top" constant="12" id="Wfy-OC-V9N"/>
-                            <constraint firstAttribute="bottom" secondItem="L4r-M8-WaT" secondAttribute="bottom" constant="12" id="XLd-tQ-avr"/>
+                            <constraint firstItem="O5n-ne-1sE" firstAttribute="top" secondItem="ZP4-77-lCq" secondAttribute="top" constant="14" id="Wfy-OC-V9N"/>
+                            <constraint firstAttribute="bottom" secondItem="L4r-M8-WaT" secondAttribute="bottom" constant="14" id="XLd-tQ-avr"/>
                             <constraint firstItem="L4r-M8-WaT" firstAttribute="leading" secondItem="TBi-Gv-pZf" secondAttribute="trailing" constant="17" id="fAm-oe-WVR"/>
                             <constraint firstAttribute="trailing" secondItem="FXU-HS-XYC" secondAttribute="trailing" constant="8" id="fml-06-X3D"/>
                             <constraint firstItem="K6V-25-ecU" firstAttribute="leading" secondItem="O5n-ne-1sE" secondAttribute="trailing" constant="10" id="l8j-b9-uk5"/>
@@ -102,6 +108,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="age" destination="L4r-M8-WaT" id="sIl-TZ-odK"/>
+                <outlet property="avatarImage" destination="TBi-Gv-pZf" id="l7x-ca-UVm"/>
+                <outlet property="name" destination="O5n-ne-1sE" id="bVE-cJ-Ozp"/>
+            </connections>
             <point key="canvasLocation" x="25" y="51.5"/>
         </tableViewCell>
     </objects>

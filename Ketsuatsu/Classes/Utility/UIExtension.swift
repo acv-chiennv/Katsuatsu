@@ -143,3 +143,41 @@ extension UITextField {
     }
 }
 
+extension UIImage {
+    func resizeImage(_ image: UIImage, size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        image.draw(in: CGRect(origin: CGPoint.zero, size: size))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizedImage!
+    }
+    
+    func data() -> Data {
+        var imageData = UIImagePNGRepresentation(self)
+        // Resize the image if it exceeds the 0.5 MB API limit
+        if (imageData?.count)! > 524288 {
+            let oldSize = self.size
+            let newSize = CGSize(width: 200, height: oldSize.height / oldSize.width * 200)
+            let newImage = self.resizeImage(self, size: newSize)
+            imageData = UIImageJPEGRepresentation(newImage, 0.5)
+        }
+        return imageData!
+    }
+    
+    func base64EncodedString() -> String? {
+        guard let imageData = UIImageJPEGRepresentation(self, 0.4) else {
+            return nil
+        }
+        return imageData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+    }
+}
+
+extension Date {
+    var age: Int {
+        return Calendar.current.dateComponents([.year], from: self, to: Date()).year!
+    }
+    
+    func getYearFromNow(year: Int) -> Date {
+        return Calendar.current.date(byAdding: .year, value: year, to: self)!
+    }
+}

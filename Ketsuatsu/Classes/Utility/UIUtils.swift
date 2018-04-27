@@ -32,6 +32,19 @@ class UIUtils: NSObject {
         return dateFormatter.date(from: date)!
     }
     
+    class func convertDateStringBetweenFormat(_ dateString: String, fromFormater: String, toFormater: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = fromFormater
+        guard let date = dateFormatter.date(from: dateString) else {
+            assert(false, "no date from string")
+            return ""
+        }
+        dateFormatter.dateFormat = toFormater
+        let timeStamp = dateFormatter.string(from: date)
+        
+        return timeStamp
+    }
+    
     // Handle String
     class func removeFirstCharacterIsZero(_ numberString: String) -> String {
         var newString = numberString
@@ -40,5 +53,38 @@ class UIUtils: NSObject {
             newString = String(newString[index...])
         }
         return newString
+    }
+    
+    // Convert format YYYY/MM/DD -> YYYY年MM月DD日
+    class func convertStringDateToJapanFormat(_ string: String) -> String {
+        let ageComponents = string.components(separatedBy: "/")
+        return ageComponents[0] + "年" + ageComponents[1] + "月" + ageComponents[2] + "日"
+    }
+    
+    // Caculator Age From Date of birthday format YYYY/MM/DD
+    class func caculatorAgeFromBirthDay(_ birthDayString: String) -> Int {
+        let ageComponents = birthDayString.components(separatedBy: "/")
+    
+        let dateDOB = Calendar.current.date(from: DateComponents(year:
+        Int(ageComponents[0]), month: Int(ageComponents[1]), day:
+        Int(ageComponents[2])))!
+    
+        return dateDOB.age
+    }
+    
+    static func fontLineSpacing(_ label : UILabel, lineSpacing : CGFloat) {
+        
+        let dText : String = label.text!
+        let fontName = label.font.fontName
+        let fontSize = label.font.pointSize
+        
+        let dStyle = NSMutableParagraphStyle()
+        dStyle.lineSpacing = lineSpacing
+        dStyle.alignment = label.textAlignment
+        let dFontAttribute = [ kCTFontAttributeName: UIFont(name: fontName, size: fontSize)! ]
+        let dAttributeString = NSMutableAttributedString(string: dText, attributes: dFontAttribute as [NSAttributedStringKey : Any])
+        
+        dAttributeString.addAttribute(kCTParagraphStyleAttributeName as NSAttributedStringKey, value: dStyle, range: NSMakeRange(0, dText.count))
+        label.attributedText = dAttributeString
     }
 }

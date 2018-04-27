@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1533A28C208638CE00BC57AA /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1533A28B208638CE00BC57AA /* CustomAlertViewController.swift */; };
+		155F2A44209050A9009CE0BD /* ViewGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F2A43209050A9009CE0BD /* ViewGraph.swift */; };
+		15777134208C784E0035213E /* PresureBlood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15777133208C784E0035213E /* PresureBlood.swift */; };
+		15777137208C7C0E0035213E /* PresureBloodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15777135208C7C0E0035213E /* PresureBloodTableViewCell.swift */; };
+		15777138208C7C0E0035213E /* PresureBloodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15777136208C7C0E0035213E /* PresureBloodTableViewCell.xib */; };
+		1577713A208CACB20035213E /* GetValuePresureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15777139208CACB20035213E /* GetValuePresureViewController.swift */; };
+		8132A9B1208881B300AD99E7 /* HistoryMeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132A9B0208881B300AD99E7 /* HistoryMeasureViewController.swift */; };
 		81510C2A207B1F32005ECD67 /* Yu Gothic Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81510C28207B1F31005ECD67 /* Yu Gothic Medium.otf */; };
 		81510C2B207B1F32005ECD67 /* Yu Gothic Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81510C29207B1F31005ECD67 /* Yu Gothic Bold.otf */; };
 		81510C2E207B4768005ECD67 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C2C207B4768005ECD67 /* UserTableViewCell.swift */; };
@@ -25,6 +32,7 @@
 		81510C4F20809F66005ECD67 /* SelectImageLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C4520809F66005ECD67 /* SelectImageLibraryViewController.swift */; };
 		81510C5020809F66005ECD67 /* FSAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81510C4620809F66005ECD67 /* FSAlbumViewCell.xib */; };
 		81510C5120809F66005ECD67 /* FSAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81510C4720809F66005ECD67 /* FSAlbumView.swift */; };
+		8159322B2085966B006A45BA /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8159322A2085966B006A45BA /* DataStore.swift */; };
 		819A6B6B207732CF002D7345 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819A6B69207732CF002D7345 /* Main.storyboard */; };
 		819A6B70207732CF002D7345 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819A6B6E207732CF002D7345 /* LaunchScreen.storyboard */; };
 		819A6B7B207732CF002D7345 /* KetsuatsuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A6B7A207732CF002D7345 /* KetsuatsuTests.swift */; };
@@ -54,7 +62,14 @@
 
 /* Begin PBXFileReference section */
 		00231EA6222493A8D2579895 /* Pods-KetsuatsuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KetsuatsuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KetsuatsuUITests/Pods-KetsuatsuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1533A28B208638CE00BC57AA /* CustomAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		155F2A43209050A9009CE0BD /* ViewGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGraph.swift; sourceTree = "<group>"; };
+		15777133208C784E0035213E /* PresureBlood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresureBlood.swift; sourceTree = "<group>"; };
+		15777135208C7C0E0035213E /* PresureBloodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresureBloodTableViewCell.swift; sourceTree = "<group>"; };
+		15777136208C7C0E0035213E /* PresureBloodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresureBloodTableViewCell.xib; sourceTree = "<group>"; };
+		15777139208CACB20035213E /* GetValuePresureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetValuePresureViewController.swift; sourceTree = "<group>"; };
 		56BC89071BCFD2FBF39FE499 /* Pods-KetsuatsuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KetsuatsuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KetsuatsuUITests/Pods-KetsuatsuUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8132A9B0208881B300AD99E7 /* HistoryMeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMeasureViewController.swift; sourceTree = "<group>"; };
 		81510C28207B1F31005ECD67 /* Yu Gothic Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yu Gothic Medium.otf"; sourceTree = "<group>"; };
 		81510C29207B1F31005ECD67 /* Yu Gothic Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yu Gothic Bold.otf"; sourceTree = "<group>"; };
 		81510C2C207B4768005ECD67 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -73,6 +88,7 @@
 		81510C4520809F66005ECD67 /* SelectImageLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImageLibraryViewController.swift; sourceTree = "<group>"; };
 		81510C4620809F66005ECD67 /* FSAlbumViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSAlbumViewCell.xib; sourceTree = "<group>"; };
 		81510C4720809F66005ECD67 /* FSAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumView.swift; sourceTree = "<group>"; };
+		8159322A2085966B006A45BA /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		819A6B62207732CF002D7345 /* Ketsuatsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ketsuatsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		819A6B6A207732CF002D7345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		819A6B6F207732CF002D7345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -148,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				81510C3920805C0B005ECD67 /* User.swift */,
+				15777133208C784E0035213E /* PresureBlood.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +184,14 @@
 				81510C4520809F66005ECD67 /* SelectImageLibraryViewController.swift */,
 			);
 			path = CameraAndPhotoLibrary;
+			sourceTree = "<group>";
+		};
+		8159322920859624006A45BA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8159322A2085966B006A45BA /* DataStore.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		819A6B59207732CF002D7345 = {
@@ -213,6 +238,7 @@
 		819A6B93207757B4002D7345 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8159322920859624006A45BA /* Managers */,
 				819A6B9E20775DD8002D7345 /* Controllers */,
 				819A6B9F20775DD8002D7345 /* Utility */,
 				819A6BA020775DD8002D7345 /* Views */,
@@ -247,6 +273,8 @@
 				819A6BAF2077653B002D7345 /* ListUserViewController.swift */,
 				81510C30207B5626005ECD67 /* AddUserViewController.swift */,
 				81510C3B208067A4005ECD67 /* StartViewController.swift */,
+				8132A9B0208881B300AD99E7 /* HistoryMeasureViewController.swift */,
+				15777139208CACB20035213E /* GetValuePresureViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +282,7 @@
 		819A6B9F20775DD8002D7345 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1533A28B208638CE00BC57AA /* CustomAlertViewController.swift */,
 				819A6BA120775F11002D7345 /* UIUtils.swift */,
 				819A6BA320776020002D7345 /* UIExtension.swift */,
 				819A6BA52077603D002D7345 /* UIColorExtension.swift */,
@@ -270,6 +299,9 @@
 			children = (
 				81510C2C207B4768005ECD67 /* UserTableViewCell.swift */,
 				81510C2D207B4768005ECD67 /* UserTableViewCell.xib */,
+				15777135208C7C0E0035213E /* PresureBloodTableViewCell.swift */,
+				15777136208C7C0E0035213E /* PresureBloodTableViewCell.xib */,
+				155F2A43209050A9009CE0BD /* ViewGraph.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,6 +409,7 @@
 				81510C2F207B4768005ECD67 /* UserTableViewCell.xib in Resources */,
 				81510C4E20809F66005ECD67 /* FSAlbumView.xib in Resources */,
 				819A6B9B207757CC002D7345 /* Assets.xcassets in Resources */,
+				15777138208C7C0E0035213E /* PresureBloodTableViewCell.xib in Resources */,
 				81510C4C20809F66005ECD67 /* PhotoPreviewViewController.xib in Resources */,
 				81510C2A207B1F32005ECD67 /* Yu Gothic Medium.otf in Resources */,
 				819A6B98207757C1002D7345 /* Info.plist in Resources */,
@@ -405,6 +438,8 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -413,6 +448,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,18 +504,25 @@
 				81510C4B20809F66005ECD67 /* CameraViewController.swift in Sources */,
 				81510C5120809F66005ECD67 /* FSAlbumView.swift in Sources */,
 				819A6B97207757C1002D7345 /* AppDelegate.swift in Sources */,
+				8159322B2085966B006A45BA /* DataStore.swift in Sources */,
+				1533A28C208638CE00BC57AA /* CustomAlertViewController.swift in Sources */,
+				155F2A44209050A9009CE0BD /* ViewGraph.swift in Sources */,
 				819A6BA420776020002D7345 /* UIExtension.swift in Sources */,
 				819A6BAC207760E1002D7345 /* Validate.swift in Sources */,
+				8132A9B1208881B300AD99E7 /* HistoryMeasureViewController.swift in Sources */,
 				819A6BA220775F11002D7345 /* UIUtils.swift in Sources */,
 				81510C2E207B4768005ECD67 /* UserTableViewCell.swift in Sources */,
 				819A6BA62077603D002D7345 /* UIColorExtension.swift in Sources */,
 				81510C4920809F66005ECD67 /* FSImageCropView.swift in Sources */,
 				819A6BAE2077615A002D7345 /* BaseViewController.swift in Sources */,
 				81510C37207F6AF3005ECD67 /* KeyboardManager.swift in Sources */,
+				15777137208C7C0E0035213E /* PresureBloodTableViewCell.swift in Sources */,
 				81510C4A20809F66005ECD67 /* PhotoPreviewViewController.swift in Sources */,
+				15777134208C784E0035213E /* PresureBlood.swift in Sources */,
 				819A6BB02077653B002D7345 /* ListUserViewController.swift in Sources */,
 				819A6BA820776075002D7345 /* TransitionUtils.swift in Sources */,
 				819A6BAA207760CA002D7345 /* Constant.swift in Sources */,
+				1577713A208CACB20035213E /* GetValuePresureViewController.swift in Sources */,
 				81510C4D20809F66005ECD67 /* FSAlbumViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

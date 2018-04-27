@@ -11,5 +11,5 @@ target 'Ketsuatsu' do
 	pod 'MBProgressHUD'
 	pod 'ActionSheetPicker-3.0'
 	pod 'IQKeyboardManager'
-
+	pod 'RealmSwift'
 end

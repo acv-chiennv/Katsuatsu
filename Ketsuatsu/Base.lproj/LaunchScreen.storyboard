@@ -1,62 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0mh-2S-paN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Yu Gothic Medium.otf">
-            <string>YuGo-Medium</string>
+        <array key="Yu Gothic Bold.otf">
+            <string>YuGo-Bold</string>
         </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="zVW-h3-gvX">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                <viewController id="0mh-2S-paN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="klF-9F-ObS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launching" translatesAutoresizingMaskIntoConstraints="NO" id="b7y-TL-Rh8">
-                                <rect key="frame" x="87" y="306" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launching" translatesAutoresizingMaskIntoConstraints="NO" id="yyA-Oq-A0G">
+                                <rect key="frame" x="87.666666666666686" y="306" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="2a9-53-HUd"/>
-                                    <constraint firstAttribute="width" constant="200" id="Pz7-wh-dPX"/>
+                                    <constraint firstAttribute="height" constant="200" id="WKM-sP-nux"/>
+                                    <constraint firstAttribute="width" constant="200" id="mSY-fA-sWh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018 CellBank Corp. All Rights Reserved." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TI-JA-Dvw">
-                                <rect key="frame" x="10" y="767" width="355" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018 CellBank Corp. All Rights Reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpB-89-QRL">
+                                <rect key="frame" x="10" y="738" width="355" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="u46-xZ-y5O"/>
+                                    <constraint firstAttribute="height" constant="40" id="QCa-nR-rJT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="YuGo-Medium" family="YuGothic" pointSize="12.5"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="YuGo-Bold" family="YuGothic" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="b7y-TL-Rh8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1q5-Xk-fIx"/>
-                            <constraint firstAttribute="bottom" secondItem="9TI-JA-Dvw" secondAttribute="bottom" constant="15" id="G4K-WW-BVD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9TI-JA-Dvw" secondAttribute="trailing" constant="10" id="fC2-BW-xch"/>
-                            <constraint firstItem="9TI-JA-Dvw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="j8P-E6-i5D"/>
-                            <constraint firstItem="b7y-TL-Rh8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="mwV-bX-fLy"/>
+                            <constraint firstItem="5iP-Bt-7aJ" firstAttribute="trailing" secondItem="HpB-89-QRL" secondAttribute="trailing" constant="10" id="1Tp-uC-iHI"/>
+                            <constraint firstItem="5iP-Bt-7aJ" firstAttribute="bottom" secondItem="HpB-89-QRL" secondAttribute="bottom" id="WOB-fd-IHK"/>
+                            <constraint firstItem="HpB-89-QRL" firstAttribute="leading" secondItem="5iP-Bt-7aJ" secondAttribute="leading" constant="10" id="X8I-V3-3sC"/>
+                            <constraint firstItem="yyA-Oq-A0G" firstAttribute="centerY" secondItem="klF-9F-ObS" secondAttribute="centerY" id="h3f-ya-9mt"/>
+                            <constraint firstItem="yyA-Oq-A0G" firstAttribute="centerX" secondItem="klF-9F-ObS" secondAttribute="centerX" id="zIK-AG-Tp2"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="5iP-Bt-7aJ"/>
                     </view>
-                    <connections>
-                        <outlet property="lbTextLaunch" destination="9TI-JA-Dvw" id="2iC-YR-yWV"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIy-nw-aez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.6305418719212"/>
+            <point key="canvasLocation" x="28" y="364"/>
         </scene>
     </scenes>
     <resources>

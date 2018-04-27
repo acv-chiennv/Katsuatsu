@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Yu Gothic Bold.otf">
+            <string>YuGo-Bold</string>
+        </array>
+        <array key="Yu Gothic Medium.otf">
+            <string>YuGo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="PresureBloodTableViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="PresureBloodTableViewCell" rowHeight="85" id="KGk-i7-Jjw" customClass="PresureBloodTableViewCell" customModule="Ketsuatsu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="84.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Bj-FL-wpC">
+                        <rect key="frame" x="15" y="7" width="290" height="70.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_clock" translatesAutoresizingMaskIntoConstraints="NO" id="6zJ-M9-TlA">
+                                <rect key="frame" x="15" y="15.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NtW-Pe-hmj"/>
+                                    <constraint firstAttribute="width" constant="40" id="tZB-kS-ELJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjZ-As-eDi">
+                                <rect key="frame" x="247" y="18" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3Lf-Y0-srx"/>
+                                    <constraint firstAttribute="width" constant="35" id="xnX-ro-dy4"/>
+                                </constraints>
+                                <state key="normal" image="ico_delete"/>
+                                <connections>
+                                    <action selector="invokedDelete:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8t5-Yn-oBS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017年10月31日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KC-nV-tzS">
+                                <rect key="frame" x="65" y="15" width="120" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="7IN-O5-lxL"/>
+                                    <constraint firstAttribute="height" constant="20" id="zIM-FP-TLF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="YuGo-Bold" family="YuGothic" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:35" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBF-Ll-vhh">
+                                <rect key="frame" x="190" y="15" width="47" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="NTr-Vo-uFO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="YuGo-Bold" family="YuGothic" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="血圧値:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6l-j9-aHr">
+                                <rect key="frame" x="65" y="38.5" width="50" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="oEN-lg-GhW"/>
+                                    <constraint firstAttribute="width" constant="50" id="yIi-vk-UDn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="YuGo-Medium" family="YuGothic" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="121/79 mmHg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfC-Dh-v3s">
+                                <rect key="frame" x="120" y="38.5" width="117" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="DDA-Fe-vfr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="YuGo-Medium" family="YuGothic" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AjZ-As-eDi" firstAttribute="centerY" secondItem="1Bj-FL-wpC" secondAttribute="centerY" id="0vX-BR-3mi"/>
+                            <constraint firstAttribute="trailing" secondItem="AjZ-As-eDi" secondAttribute="trailing" constant="8" id="1nW-B2-1yl"/>
+                            <constraint firstItem="KfC-Dh-v3s" firstAttribute="leading" secondItem="w6l-j9-aHr" secondAttribute="trailing" constant="5" id="79E-q5-crG"/>
+                            <constraint firstItem="AjZ-As-eDi" firstAttribute="leading" secondItem="UBF-Ll-vhh" secondAttribute="trailing" constant="10" id="Htr-sw-Qjc"/>
+                            <constraint firstItem="w6l-j9-aHr" firstAttribute="leading" secondItem="6zJ-M9-TlA" secondAttribute="trailing" constant="10" id="RlO-Zd-28h"/>
+                            <constraint firstItem="UBF-Ll-vhh" firstAttribute="leading" secondItem="4KC-nV-tzS" secondAttribute="trailing" constant="5" id="Yj3-V2-jOA"/>
+                            <constraint firstItem="4KC-nV-tzS" firstAttribute="leading" secondItem="6zJ-M9-TlA" secondAttribute="trailing" constant="10" id="aRt-eH-gNt"/>
+                            <constraint firstAttribute="bottom" secondItem="KfC-Dh-v3s" secondAttribute="bottom" constant="12" id="akx-Ms-j9O"/>
+                            <constraint firstItem="UBF-Ll-vhh" firstAttribute="top" secondItem="1Bj-FL-wpC" secondAttribute="top" constant="15" id="dJd-bX-6uH"/>
+                            <constraint firstItem="4KC-nV-tzS" firstAttribute="top" secondItem="1Bj-FL-wpC" secondAttribute="top" constant="15" id="gPG-of-mKv"/>
+                            <constraint firstItem="AjZ-As-eDi" firstAttribute="leading" secondItem="KfC-Dh-v3s" secondAttribute="trailing" constant="10" id="gyk-5w-6CA"/>
+                            <constraint firstItem="6zJ-M9-TlA" firstAttribute="centerY" secondItem="1Bj-FL-wpC" secondAttribute="centerY" id="ogg-ag-2J2"/>
+                            <constraint firstItem="6zJ-M9-TlA" firstAttribute="leading" secondItem="1Bj-FL-wpC" secondAttribute="leading" constant="15" id="uv3-o0-HH8"/>
+                            <constraint firstAttribute="bottom" secondItem="w6l-j9-aHr" secondAttribute="bottom" constant="12" id="y5f-xn-3ws"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1Bj-FL-wpC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="3a8-QU-M70"/>
+                    <constraint firstAttribute="bottom" secondItem="1Bj-FL-wpC" secondAttribute="bottom" constant="7" id="gqM-BA-yOP"/>
+                    <constraint firstItem="1Bj-FL-wpC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ofT-4D-TDr"/>
+                    <constraint firstAttribute="trailing" secondItem="1Bj-FL-wpC" secondAttribute="trailing" constant="15" id="rCa-W5-C0f"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="date" destination="4KC-nV-tzS" id="OBz-8Q-YK5"/>
+                <outlet property="time" destination="UBF-Ll-vhh" id="6Kg-zi-gqH"/>
+                <outlet property="value" destination="KfC-Dh-v3s" id="e2g-U9-ioK"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="43.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_clock" width="30" height="30"/>
+        <image name="ico_delete" width="20" height="23"/>
+    </resources>
+</document>
